@@ -9,10 +9,10 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Download GHC and cabal
 RUN apt-get update && \
+    apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:hvr/ghc && \
     apt-get update && \
     apt-get install -y cabal-install-1.18 ghc-7.8.3 cpphs \
-                       software-properties-common \
                        libpcre3 libpcre3-dev mysql-server \
                        libmysqlclient-dev screen \
                        happy-1.19.4 alex-3.1.3 \
