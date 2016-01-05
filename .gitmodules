@@ -1,0 +1,3 @@
+[submodule "bead"]
+	path = bead
+	url = https://github.com/andorp/bead.git
