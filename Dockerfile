@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Download GHC and cabal
 RUN apt-get update && \
-    apt-get install -y software-properties-common && \
+    apt-get install -y software-properties-common pkg-config && \
     add-apt-repository -y ppa:hvr/ghc && \
     apt-get update && \
     apt-get install -y cabal-install-1.18 ghc-7.8.3 cpphs \
