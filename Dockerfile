@@ -31,7 +31,7 @@ COPY "./bead/Bead.cabal" "/development/init/Bead.cabal"
 COPY "./bead/docker/container-script/dev-env-setup.sh" "/development/init/dev-env-setup.sh"
 RUN cd development/init && \
     cabal update && \
-    cabal install -j1 --only-dependencies --reorder-goals
+    cabal install --only-dependencies --reorder-goals
 
 # Directory for sources, running
 VOLUME ["/development/bead", "/bead-server"]
