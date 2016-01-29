@@ -16,6 +16,5 @@ after_success:
 - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASS
 - export REPO=andorp/bead
 - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
-- docker build -f Dockerfile -t $REPO:$COMMIT .
-- docker $REPO:$TAG
+- docker build -f Dockerfile -t $REPO:$TAG .
 - docker push $REPO
